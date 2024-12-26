@@ -1,9 +1,15 @@
 <template>
   <ion-app>
-    <ion-router-outlet />
+    <ion-content class="ion-padding">
+      <ion-button @click="printPage">Print</ion-button>
+    </ion-content>
   </ion-app>
 </template>
 
 <script setup lang="ts">
-import { IonApp, IonRouterOutlet } from '@ionic/vue';
+import { IonApp, IonContent, IonButton } from '@ionic/vue';
+
+function printPage() {
+  window.print();
+}
 </script>
